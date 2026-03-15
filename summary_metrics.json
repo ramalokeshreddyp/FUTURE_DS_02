@@ -1,0 +1,76 @@
+{
+  "overall": {
+    "customers": 7043,
+    "churn_rate_pct": 26.54,
+    "avg_tenure_months": 32.37,
+    "avg_tenure_churned_months": 17.98,
+    "avg_tenure_retained_months": 37.57,
+    "total_mrr": 456116.6,
+    "retained_mrr": 316985.75,
+    "churned_mrr": 139130.85,
+    "retention_12m_est": 84.32,
+    "retention_24m_est": 78.87
+  },
+  "top_risk_segments": [
+    {
+      "dimension": "TenureGroup",
+      "segment": "0-3m",
+      "churn_rate": 56.21,
+      "uplift_vs_overall_pct": 111.84
+    },
+    {
+      "dimension": "PaymentMethod",
+      "segment": "Electronic check",
+      "churn_rate": 45.29,
+      "uplift_vs_overall_pct": 70.65
+    },
+    {
+      "dimension": "TenureGroup",
+      "segment": "4-6m",
+      "churn_rate": 44.63,
+      "uplift_vs_overall_pct": 68.18
+    },
+    {
+      "dimension": "Contract",
+      "segment": "Month-to-month",
+      "churn_rate": 42.71,
+      "uplift_vs_overall_pct": 60.94
+    },
+    {
+      "dimension": "InternetService",
+      "segment": "Fiber optic",
+      "churn_rate": 41.89,
+      "uplift_vs_overall_pct": 57.87
+    },
+    {
+      "dimension": "OnlineSecurity",
+      "segment": "No",
+      "churn_rate": 41.77,
+      "uplift_vs_overall_pct": 57.39
+    },
+    {
+      "dimension": "SeniorCitizen",
+      "segment": "Yes",
+      "churn_rate": 41.68,
+      "uplift_vs_overall_pct": 57.07
+    },
+    {
+      "dimension": "TechSupport",
+      "segment": "No",
+      "churn_rate": 41.64,
+      "uplift_vs_overall_pct": 56.9
+    },
+    {
+      "dimension": "TenureGroup",
+      "segment": "7-12m",
+      "churn_rate": 35.89,
+      "uplift_vs_overall_pct": 35.23
+    },
+    {
+      "dimension": "PaperlessBilling",
+      "segment": "Yes",
+      "churn_rate": 33.57,
+      "uplift_vs_overall_pct": 26.48
+    }
+  ]
+}
