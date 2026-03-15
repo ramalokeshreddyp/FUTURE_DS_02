@@ -26,6 +26,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Rebuild analysis artifacts
+        run: |
+          python scripts/retention_churn_analysis.py
+
+      - name: Verify generated files
+        run: |
+          ls -la outputs
+          ls -la outputs/figures
+          ls -la outputs/tables
+
       - name: Prepare static site
         run: |
           mkdir -p site
