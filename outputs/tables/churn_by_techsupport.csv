@@ -1,0 +1,4 @@
+TechSupport,customers,churn_rate,avg_tenure,avg_monthly_charges
+No,3473,41.64,25.84,74.59
+Yes,2044,15.17,44.82,80.68
+No internet service,1526,7.4,30.55,21.08

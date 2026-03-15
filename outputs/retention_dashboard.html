@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Retention & Churn Dashboard</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #2a9d8f;
+    }
+    body { font-family: Segoe UI, Tahoma, sans-serif; margin: 0; background: var(--bg); color: var(--text); }
+    .container { max-width: 1300px; margin: 24px auto; padding: 0 16px; }
+    .hero { background: linear-gradient(120deg, #d8f3dc, #bee1e6); border-radius: 18px; padding: 20px 24px; margin-bottom: 16px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 16px; }
+    .card { background: var(--card); border-radius: 12px; padding: 14px; box-shadow: 0 6px 18px rgba(17,24,39,.08); }
+    .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+    .value { font-size: 24px; font-weight: 700; color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 12px; overflow: hidden; }
+    th, td { padding: 10px; border-bottom: 1px solid #e5e7eb; text-align: left; font-size: 14px; }
+    th { background: #f0f4f8; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <h1>Customer Retention & Churn Analysis</h1>
+      <p>Interactive decision dashboard for subscription retention strategy.</p>
+    </div>
+    <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.3.1.min.js" integrity="sha256-4rD3fugVb/nVJYUv5Ky3v+fYXoouHaBSP20WIJuEiWg=" crossorigin="anonymous"></script>                <div id="02dc368c-cc4b-4c2c-86d4-0ded1d6e7333" class="plotly-graph-div" style="height:840px; width:1280px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("02dc368c-cc4b-4c2c-86d4-0ded1d6e7333")) {                    Plotly.newPlot(                        "02dc368c-cc4b-4c2c-86d4-0ded1d6e7333",                        [{"marker":{"color":"#E76F51"},"x":["Month-to-month","One year","Two year"],"xaxis":"x","y":{"dtype":"f8","bdata":"exSuR+FaRUAK16NwPYomQKRwPQrXowZA"},"yaxis":"y","type":"bar"},{"marker":{"color":"#2A9D8F"},"x":["0-3m","4-6m","7-12m","13-24m","25-48m","49-72m"],"xaxis":"x2","y":{"dtype":"f8","bdata":"exSuR+EaTEBxPQrXo1BGQFK4HoXr8UFA9ihcj8K1PECkcD0K12M0QIXrUbgeBSNA"},"yaxis":"y2","type":"bar"},{"line":{"color":"#1D3557","width":3},"mode":"lines","x":{"dtype":"i1","bdata":"AAABAgMEBQYHCAkKCwwNDg8QERITFBUWFxgZGhscHR4fICEiIyQlJicoKSorLC0uLzAxMjM0NTY3ODk6Ozw9Pj9AQUJDREVGR0g="},"xaxis":"x3","y":{"dtype":"f8","bdata":"AAAAAAAA8D8AAAAAAADwP+oCaqxQRe4\u002fKrd95dKw7T+zHlU1Oz3tP\u002fsiNE1b1ew\u002fgDSGM\u002fqD7D8Jjtsdf1DsP7spmk4IDuw\u002fYUMttX3W6z+gE+5Qu5jrP2i6OAp3W+s\u002fFAzYGKsw6z9VgXShffvqP9DXIL1yxeo\u002f2k7yP86i6j95JGbSzWzqP2N\u002fEkFiQ+o\u002fbCUEIXoc6j+QKgrhEPjpP5cKf4rA2uk\u002f72HoiaC+6T82FIIBuqPpP4TqJ+uFeOk\u002fpTbkEWVj6T9gVIUdVD3pP0RTy6aOFuk\u002foSfq9eT86D+FyYISROboP7kxTzoJ0eg\u002fgW2fdSm26D9CrVOiBpnoPyormgdpe+g\u002fxLhrrLlX6D8WvsFeBz3oPyvCr\u002frJJeg\u002fTmoSrT8I6D9t346DFfTnP+v\u002f0g9v1ec\u002fel3A\u002fmq65z+pWEXW25znP8AMOJMAgec\u002fpPC9sHJi5z8adAXKQUPnP8m7nSEwIec\u002fcLMSQEsT5z+zDKp\u002fJgXnP0sSRBk66OY\u002fDCr9vZnF5j+xbDuc0a7mPwGBKJ7qh+Y\u002fCW4kd19t5j+hekGPjVfmP6Sn1x4XQeY\u002fBIw\u002fnVUY5j\u002f8zLjXXfHlP5FFsbeS1eU\u002fhH8jRLm15T\u002fOvHzpLZvlP2MDYYBjdeU\u002fWQg3NuhY5T9rXXL\u002fy0LlPxmFX5PZI+U\u002f+CCIF4UP5T+kYhTjav7kP77b4ElW7OQ\u002fbwSpPt7A5D8H1zrcAX7kPxcZX2ZvRuQ\u002fRZ4nvzcP5D9CnZ79JdjjP3z+RghPguM\u002fYk7DX\u002ftJ4z\u002f5kI4NI\u002fjiPw=="},"yaxis":"y3","type":"scatter"},{"marker":{"color":"#F4A261"},"x":["Electronic check","Mailed check","Bank transfer (automatic)","Credit card (automatic)"],"xaxis":"x4","y":{"dtype":"f8","bdata":"hetRuB6lRkBcj8L1KBwzQPYoXI\u002fCtTBAexSuR+F6LkA="},"yaxis":"y4","type":"bar"}],                        {"annotations":[{"font":{"size":16},"showarrow":false,"text":"Churn Rate by Contract","x":0.225,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Churn Rate by Tenure Group","x":0.775,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Retention Curve (Kaplan-Meier)","x":0.225,"xanchor":"center","xref":"paper","y":0.375,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Churn Rate by Payment Method","x":0.775,"xanchor":"center","xref":"paper","y":0.375,"yanchor":"bottom","yref":"paper"}],"height":840,"showlegend":false,"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"#C8D4E3"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""},"bgcolor":"white","radialaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"yaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"zaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"baxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"bgcolor":"white","caxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2}}},"title":{"text":"Customer Retention & Churn Dashboard"},"width":1280,"xaxis":{"anchor":"y","domain":[0.0,0.45]},"yaxis":{"anchor":"x","domain":[0.625,1.0],"title":{"text":"Churn Rate (%)"}},"xaxis2":{"anchor":"y2","domain":[0.55,1.0]},"yaxis2":{"anchor":"x2","domain":[0.625,1.0],"title":{"text":"Churn Rate (%)"}},"xaxis3":{"anchor":"y3","domain":[0.0,0.45]},"yaxis3":{"anchor":"x3","domain":[0.0,0.375],"title":{"text":"Retention Probability"}},"xaxis4":{"anchor":"y4","domain":[0.55,1.0]},"yaxis4":{"anchor":"x4","domain":[0.0,0.375],"title":{"text":"Churn Rate (%)"}}},                        {"responsive": true}                    )                };            </script>        </div>
+    <h2>Top Customers by Lifetime Billing</h2>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>customerID</th>
+      <th>tenure</th>
+      <th>total_charges</th>
+      <th>churn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2889-FPWRM</td>
+      <td>72</td>
+      <td>8684.80</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>7569-NMZYQ</td>
+      <td>72</td>
+      <td>8672.45</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>9739-JLPQJ</td>
+      <td>72</td>
+      <td>8670.10</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>9788-HNGUT</td>
+      <td>72</td>
+      <td>8594.40</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>8879-XUAHX</td>
+      <td>71</td>
+      <td>8564.75</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+SeniorCitizen,customers,churn_rate,avg_tenure,avg_monthly_charges
+Yes,1142,41.68,33.3,79.82
+No,5901,23.61,32.19,61.85
