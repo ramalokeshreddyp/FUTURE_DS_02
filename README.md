@@ -4,6 +4,7 @@
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458)
 ![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Dashboard-3F4F75)
 ![Status](https://img.shields.io/badge/Project-Completed-2A9D8F)
+![Deploy](https://github.com/ramalokeshreddyp/FUTURE_DS_02/actions/workflows/deploy-dashboard.yml/badge.svg)
 
 A business-focused retention analytics project on the Telco churn dataset to identify churn patterns, retention drivers, and customer lifetime trends for a subscription-style service.
 
@@ -145,6 +146,21 @@ python scripts/retention_churn_analysis.py
 - Exportable churn tables (`outputs/tables/*.csv`)
 - Visual evidence pack (`outputs/figures/*.png`)
 
+## 10A. Dashboard Access
+- Live dashboard (GitHub Pages): https://ramalokeshreddyp.github.io/FUTURE_DS_02/
+- Local dashboard file: `outputs/retention_dashboard.html`
+
+## 10B. Task 2 Requirement Coverage
+| Task Requirement | Implemented In This Project | Evidence |
+|---|---|---|
+| Analyze churn patterns | Segment churn analysis by contract, tenure, payment, service profile | `outputs/tables/churn_by_*.csv`, `outputs/figures/churn_by_*.png` |
+| Identify key retention drivers | Uplift-based risk segment ranking and retention driver interpretation | `outputs/summary_metrics.json`, `outputs/retention_analysis_report.md` |
+| Customer lifetime trends | Tenure comparisons, CLV proxy, retained vs churned behavior | `outputs/tables/cleaned_dataset.csv`, `outputs/retention_analysis_report.md` |
+| Cohort/retention analysis | Tenure-cohort proxy framework and Kaplan-Meier style retention curve | `outputs/tables/retention_curve.csv`, `outputs/figures/retention_curve.png` |
+| Dashboard/report deliverable | Interactive Plotly dashboard + markdown report | `outputs/retention_dashboard.html`, `outputs/retention_analysis_report.md` |
+| Actionable recommendations | Business strategy section with concrete churn-reduction actions | `README.md`, `outputs/retention_analysis_report.md` |
+| Public GitHub and deployment | Repository with GitHub Actions and Pages deployment workflow | `.github/workflows/deploy-dashboard.yml` |
+
 ## 11. Actionable Recommendations
 1. **Protect first 6 months:** Deploy onboarding nudges, activation tracking, and proactive outreach for new users.
 2. **Reduce month-to-month volatility:** Offer annual-plan discount ladders and price-lock offers.
@@ -158,3 +174,11 @@ For Future Interns submission, include this repository with dashboard screenshot
 - Metrics improved/identified
 - Tools and methods used
 - Business recommendations
+
+## 13. Submission Checklist (Future Interns)
+- Public GitHub repository with complete source and outputs
+- README with objective, methods, insights, and links
+- Architecture and technical documentation files
+- Dashboard/report artifact ready for stakeholder review
+- LinkedIn post summarizing problem, approach, and insights
+- Tag and follow: https://www.linkedin.com/company/future-interns/
